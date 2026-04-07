@@ -20,3 +20,7 @@ def home():
 def get_prediction(data: InputData):
     result = predict(data.features)
     return {"prediction": result}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app)
